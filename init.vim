@@ -27,8 +27,11 @@ nmap <leader>qa :bufdo<cr>
 nmap <leader>d :bnext<cr>
 nmap <leader>a :bprevious<cr>
 
-inoremap qw <esc>
-inoremap <C-s> <esc>
+imap qw <esc>
+vmap qw <esc>
+vmap c <y>
+vmap x <d>
+imap <C-s> <esc>
 nmap <leader>ff :Telescope find_files<cr>
 nmap <leader>fg :Telescope live_grep<cr>
 nmap <leader>f :Files<cr>
@@ -36,12 +39,16 @@ nmap <leader>l :Lines<cr>
 nmap <leader>ft :FloatermToggle<cr>
 nmap <leader>t :terminal<cr>
 
+" Cargo, Rust hotkey
+nmap <leader>cc :Ccheck<cr>
+nmap <leader>ct :Ctest<cr>
+nmap <leader>cb :Cbuild<cr>
+nmap <leader>cr :Crun<cr>
+nmap <leader>rt :RustTest!<cr>
+nmap <leader>rr :RustRun<cr>
+
 set autoindent
 set hidden
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline#extension#tabline#enabled = 1
-let g:airline#extension#tabline#formatter = 'unique_tail'
 
 set iminsert=0
 set tabstop=4
@@ -60,8 +67,6 @@ let &t_EI .="\e[2 q" "EI = нормальный режим
 set smartindent
 set expandtab
 set shiftwidth=2
-
-inoremap jk <esc>
 
 call plug#begin('~/.vim/plugged')
 
@@ -203,6 +208,7 @@ let g:coc_global_extensions=[
 "    \'coc-pyright',
 
 " Rust
+let g:rustfmt_autosave = 1
 
 let g:LanguageClient_serverCommands = {
 \ 'rust': ['rust-analyzer'],
@@ -454,11 +460,6 @@ function! s:Bclose(bang, buffer)
   execute wcurrent.'wincmd w'
 endfunction
 command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
-nnoremap <silent> <Leader>bd :Bclose<CR>
-
-map gn :bn<cr>
-map gp :bp<cr>
-map gw :Bclose<cr>
 
 " Run Python and C files by Ctrl+h or <F5>
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3.11' shellescape(@%, 1)<CR>
@@ -478,12 +479,7 @@ let g:transparent_enabled = v:true
 
 tnoremap <Esc> <C-\><C-n>
 
-" Go to next or prev tab by H and L accordingly
-nnoremap H gT
-nnoremap L gt
-
 " Autosave plugin
-
 lua << EOF
 require("auto-save").setup(
     {
@@ -533,5 +529,4 @@ let g:floaterm_height=0.92
 
 " Colorscheme
 colorscheme purpura
-
 
