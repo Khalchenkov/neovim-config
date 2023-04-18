@@ -29,8 +29,6 @@ nmap <leader>a :bprevious<cr>
 
 imap qw <esc>
 vmap qw <esc>
-vmap c <y>
-vmap x <d>
 imap <C-s> <esc>
 nmap <leader>ff :Telescope find_files<cr>
 nmap <leader>fg :Telescope live_grep<cr>
