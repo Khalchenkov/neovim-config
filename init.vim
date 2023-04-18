@@ -512,7 +512,7 @@ require('smoothcursor').setup({
         --head = { cursor = "🧬️", texthl = "SmoothCursor", linehl = nil },
         --head = { cursor = "🦝", texthl = "SmoothCursor", linehl = nil },
         --head = { cursor = "🦊", texthl = "SmoothCursor", linehl = nil },
-body = {
+        body = {
             { cursor = "", texthl = "SmoothCursorPurple" },
             { cursor = "", texthl = "SmoothCursorPurple" },
             { cursor = "●", texthl = "SmoothCursorPurple" },
