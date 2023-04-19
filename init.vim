@@ -38,6 +38,8 @@ nmap <leader>ft :FloatermToggle<cr>
 nmap <leader>t :terminal<cr>
 
 " Cargo, Rust hotkey
+nmap <leader>ccl :Cclean<cr>
+nmap <leader>cu :Cupdate<cr>
 nmap <leader>cc :Ccheck<cr>
 nmap <leader>ct :Ctest<cr>
 nmap <leader>cb :Cbuild<cr>
