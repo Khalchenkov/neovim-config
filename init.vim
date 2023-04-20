@@ -599,6 +599,27 @@ require("nvim-tree").setup({
 })
 EOF
 
+" Comment
+lua << EOF
+require('Comment').setup(
+{
+    toggler = {
+        ---Line-comment toggle keymap
+        line = 'ccc',
+    },
+    ---LHS of operator-pending mappings in NORMAL and VISUAL mode
+    opleader = {
+        ---Line-comment keymap
+        line = 'c',
+    },
+    ---LHS of extra mappings
+    extra = {
+        ---Add comment at the end of line
+        eol = 'ce',
+    },
+})
+EOF
+
 " Treesitter config
 lua << EOF
 require'nvim-treesitter.configs'.setup {
