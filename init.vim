@@ -16,7 +16,7 @@ set ruler
 map <F3> :NvimTreeToggle<CR>
 set colorcolumn=79
 set guicursor+=a:blinkon1
-
+nnoremap ,<space> :nohlsearch<CR>
 set wrap
 set linebreak
 let mapleader = " "
@@ -259,9 +259,6 @@ vnoremap <silent><nowait><expr> <C-up> coc#float#has_scroll() ? coc#float#scroll
 
 " Turn on vim-sneak
 let g:sneak#label = 1
-
-" turn off search highlight
-nnoremap ,<space> :nohlsearch<CR>
 
 lua << EOF
 -- Set completeopt to have a better completion experience
