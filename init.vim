@@ -14,6 +14,8 @@ set nowb
 set nobackup
 set ruler
 map <F3> :NvimTreeToggle<CR>
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 set colorcolumn=79
 set guicursor+=a:blinkon1
 nnoremap ,<space> :nohlsearch<CR>
