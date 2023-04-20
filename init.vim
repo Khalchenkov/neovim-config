@@ -90,7 +90,6 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'yassinebridi/vim-purpura'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-telescope/telescope.nvim',
 Plug 'tribela/vim-transparent'
 Plug 'gen740/SmoothCursor.nvim'
 
