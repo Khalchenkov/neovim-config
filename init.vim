@@ -66,7 +66,6 @@ let &t_EI .="\e[2 q" "EI = нормальный режим
 
 " for tabulation
 set smartindent
-set expandtab
 set shiftwidth=2
 
 call plug#begin('~/.vim/plugged')
