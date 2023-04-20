@@ -497,8 +497,6 @@ autocmd FileType c imap <buffer> <F5> <esc>:w<CR>:exec '!gcc' shellescape(@%, 1)
 autocmd FileType sh map <buffer> <F5> :w<CR>:exec '!bash' shellescape(@%, 1)<CR>
 autocmd FileType sh imap <buffer> <F5> <esc>:w<CR>:exec '!bash' shellescape(@%, 1)<CR>
 
-set rnu
-
 let g:transparent_enabled = v:true
 
 " Autosave plugin
