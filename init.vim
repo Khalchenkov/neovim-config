@@ -48,7 +48,6 @@ nmap <leader>rt :RustTest!<cr>
 nmap <leader>rr :RustRun<cr>
 
 set autoindent
-set hidden
 
 set iminsert=0
 set tabstop=4
