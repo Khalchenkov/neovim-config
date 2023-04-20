@@ -80,6 +80,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'bling/vim-airline'
 Plug 'nvim-tree/nvim-web-devicons' " optional
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'rafamadriz/friendly-snippets'
 
 " color schemas
 Plug 'morhetz/gruvbox'  " colorscheme gruvbox
