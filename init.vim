@@ -81,6 +81,7 @@ Plug 'bling/vim-airline'
 Plug 'nvim-tree/nvim-web-devicons' " optional
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " color schemas
 Plug 'morhetz/gruvbox'  " colorscheme gruvbox
@@ -612,6 +613,31 @@ require("nvim-tree").setup({
   },
 })
 EOF
+
+" Treesitter config
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true
+  },
+  indent = { enable = true },
+  ensure_installed = {
+    "bash",
+    "c",
+    "cpp",
+    "css",
+    "go",
+    "javascript",
+    "json",
+    "python",
+    "toml",
+    "typescript",
+    "vim",
+    "yaml",
+  }
+}
+EOF
+
 
 " White colors for LSP messages in code
 set termguicolors
