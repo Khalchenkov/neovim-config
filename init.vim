@@ -150,8 +150,9 @@ let g:coc_global_extensions=[
     \'coc-markdown-preview-enhanced',
     \'coc-clangd',
     \'coc-clang-format-style-options',
-    \'coc-jedi',
     \'coc-pyright',
+    \'coc-go',
+    \'coc-snippets',
     \]
 
 "   JS, TS, Json
@@ -182,8 +183,13 @@ let g:coc_global_extensions=[
 "    \'coc-clang-format-style-options',
 "   Python
 "    \
-"    \'coc-jedi',
 "    \'coc-pyright',
+"   Golang
+"    \
+"    \'coc-go',
+"   Snippets
+"    \
+"    \'coc-snippets',
 
 " Rust
 let g:rustfmt_autosave = 1
