@@ -42,6 +42,7 @@ nmap <leader>t :terminal<cr>
 " Cargo, Rust hotkey
 nmap <leader>cc :Ccheck<cr>
 nmap <leader>ct :Ctest<cr>
+nmap <leader>cb :Cbuild<cr>
 nmap <leader>rt :RustTest!<cr>
 nmap <leader>rr :RustRun<cr>
 
