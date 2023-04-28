@@ -629,6 +629,8 @@ require'barbar'.setup {
 }
 EOF
 
+" Statusline config
+
 " White colors for LSP messages in code
 set termguicolors
 hi DiagnosticError guifg=White
