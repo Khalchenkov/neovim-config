@@ -74,7 +74,6 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rust-lang/rust.vim'
-Plug 'vim-airline/vim-airline'
 Plug 'nvim-tree/nvim-web-devicons' " optional
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'rafamadriz/friendly-snippets'
@@ -83,7 +82,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " color schemas
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'yassinebridi/vim-purpura'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tribela/vim-transparent'
