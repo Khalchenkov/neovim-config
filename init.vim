@@ -26,8 +26,16 @@ nmap qq :q<cr>
 nmap <leader>w :w!<cr>
 nmap <leader>qq :bd<cr>
 nmap <leader>qa :bufdo<cr>
-nmap <leader>d :bnext<cr>
-nmap <leader>a :bprevious<cr>
+nmap <leader><right> :bnext<cr>
+nmap <leader><left> :bprevious<cr>
+nmap <leader>br :BufferRestore<cr>
+nmap <leader>qa :BufferCloseAllButCurrentOrPinned<cr>
+nmap <leader>b :Buffers<cr>
+nmap <leader>d :BufferMoveNext<cr>
+nmap <leader>a :BufferMovePrevious<cr>
+nmap <leader>p :BufferPick<cr>
+nmap <leader>bd :BufferPickDelete<cr>
+nmap <leader>bp :BufferPin<cr>
 
 imap qw <esc>
 vmap qw <esc>
