@@ -611,6 +611,22 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+lua << EOF
+vim.g.barbar_auto_setup = false -- disable auto-setup
+require'barbar'.setup {
+  icons = {
+    diagnostics = {
+      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ '},
+      [vim.diagnostic.severity.WARN] = {enabled = true},
+      [vim.diagnostic.severity.INFO] = {enabled = false},
+      [vim.diagnostic.severity.HINT] = {enabled = false},
+    },
+    modified = {button = '●'},
+    pinned = {button = '車', filename = true, separator = {right = ''}},
+  },
+  insert_at_end = true,
+}
+EOF
 
 " White colors for LSP messages in code
 set termguicolors
