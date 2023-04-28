@@ -630,6 +630,60 @@ require'barbar'.setup {
 EOF
 
 " Statusline config
+lua << EOF
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    section_separators = { left = ' 🐨', right = '🐸 ' },
+    component_separators = { left = '', right = '' },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch',
+      {'diff', symbols = { added = ' ', modified = ' 柳', removed = '  ' },
+        diff_color = {
+          added = { fg = '#20fc03' },
+          modified = { fg = '#ffffff' },
+          removed = { fg = '#00ffff' },
+        },
+      },
+      {'diagnostics', sources = { 'nvim_diagnostic' },
+        symbols = { error = '(╯°□°)╯  ', warn = ' ', info = ' ' },
+        diagnostics_color = {
+          color_error = { fg = '#ff0000' },
+          color_warn = { fg = '#ff9900' },
+          color_info = { fg = '#adadad' },
+        },
+      }
+    },
+    lualine_c = {{'filename', color = { gui = 'bold' }}, 'filesize'},
+    lualine_x = {'filetype', 'encoding', 'fileformat'},
+    lualine_y = {'%l,%c/%L'},
+    lualine_z = {'progress'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+}
+EOF
 
 " White colors for LSP messages in code
 set termguicolors
