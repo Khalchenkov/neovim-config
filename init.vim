@@ -611,6 +611,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+" Tabline config
 lua << EOF
 vim.g.barbar_auto_setup = false -- disable auto-setup
 require'barbar'.setup {
