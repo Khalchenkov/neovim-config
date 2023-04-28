@@ -117,12 +117,6 @@ Plug 'ray-x/lsp_signature.nvim'
 
 call plug#end()
 
-" настройки Vim-Airline
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
 " Moving string
 nnoremap <A-down> :m .+1<CR>==
 nnoremap <A-up> :m .-2<CR>==
