@@ -1,0 +1,5 @@
+:CocConfig
+
+{
+  "inlayHint.enable": false
+}
