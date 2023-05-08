@@ -19,7 +19,6 @@ set foldexpr=nvim_treesitter#foldexpr()
 set colorcolumn=79
 set guicursor+=a:blinkon1
 nnoremap ,<space> :nohlsearch<CR>
-set wrap
 set linebreak
 let mapleader = " "
 nmap qq :q<cr>
