@@ -52,6 +52,7 @@ nmap <leader>ct :Ctest<cr>
 nmap <leader>cb :Cbuild<cr>
 nmap <leader>rt :RustTest!<cr>
 nmap <leader>rr :RustRun<cr>
+nmap <leader>rf :RustFmt<cr>
 
 set autoindent
 
