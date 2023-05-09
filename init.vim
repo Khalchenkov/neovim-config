@@ -137,20 +137,14 @@ vnoremap <A-up> :m '<-2<CR>gv=gv
 let g:coc_global_extensions=[
     \'coc-json',
     \'coc-tsserver',
-    \'coc-rome',
     \'coc-rust-analyzer',
     \'coc-css',
     \'coc-html',
-    \'coc-htmldjango',
-    \'coc-html-css-support',
-    \'coc-htmlhint',
     \'coc-xml',
     \'coc-yaml',
     \'coc-toml',
     \'coc-markdownlint',
-    \'coc-markdown-preview-enhanced',
     \'coc-clangd',
-    \'coc-clang-format-style-options',
     \'coc-pyright',
     \'coc-go',
     \'coc-snippets',
@@ -160,7 +154,6 @@ let g:coc_global_extensions=[
 "    \
 "    \'coc-json',
 "    \'coc-tsserver',
-"    \'coc-rome',
 "   Rust
 "    \
 "    \'coc-rust-analyzer',
@@ -168,20 +161,15 @@ let g:coc_global_extensions=[
 "    \
 "    \'coc-css',
 "    \'coc-html',
-"    \'coc-htmldjango',
-"    \'coc-html-css-support',
-"    \'coc-htmlhint',
 "   XML, YAML, TOML, Markdown
 "    \
 "    \'coc-xml',
 "    \'coc-yaml',
 "    \'coc-toml',
 "    \'coc-markdownlint',
-"    \'coc-markdown-preview-enhanced',
 "   C/C++
 "    \
 "    \'coc-clangd',
-"    \'coc-clang-format-style-options',
 "   Python
 "    \
 "    \'coc-pyright',
