@@ -181,8 +181,6 @@ let g:coc_global_extensions=[
 "    \'coc-snippets',
 
 " Rust
-let g:rustfmt_autosave = 1
-
 let g:LanguageClient_serverCommands = {
 \ 'rust': ['rust-analyzer'],
 \ }
