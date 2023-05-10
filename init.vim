@@ -613,6 +613,7 @@ require'barbar'.setup {
     pinned = {button = '車', filename = true, separator = {right = ''}},
   },
   insert_at_end = true,
+  auto_hide = true,
 }
 EOF
 
