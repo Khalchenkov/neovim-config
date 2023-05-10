@@ -592,6 +592,7 @@ require'nvim-treesitter.configs'.setup {
     "toml",
     "typescript",
     "vim",
+    "lua",
     "yaml",
   }
 }
