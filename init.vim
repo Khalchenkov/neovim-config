@@ -667,7 +667,7 @@ require('lualine').setup {
     lualine_z = {}
   },
   tabline = {},
-  winbar = {},
+  winbar = { lualine_c = {"%f"}, },
   inactive_winbar = {},
   extensions = {}
 }
