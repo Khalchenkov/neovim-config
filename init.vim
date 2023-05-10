@@ -673,16 +673,15 @@ require('lualine').setup {
 }
 EOF
 
-" White colors for LSP messages in code
-set termguicolors
-hi DiagnosticError guifg=White
-hi DiagnosticWarn  guifg=White
-hi DiagnosticInfo  guifg=White
-hi DiagnosticHint  guifg=Whitei
-
 " Floaterm settings
 let g:floaterm_width=0.93
 let g:floaterm_height=0.92
 
 " Colorscheme
 colorscheme purpura
+
+" Colors for messages in code
+set termguicolors
+hi DiagnosticError guifg=#d000ff
+hi CocErrorHighlight cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl guibg=None guifg=#ff21a2 guisp=#fc0394
+hi CocWarningHighlight cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
