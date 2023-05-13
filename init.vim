@@ -806,7 +806,7 @@ require('lualine').setup {
     lualine_z = {}
   },
   tabline = {},
-  winbar = { lualine_c = {"%f"}, },
+  winbar = { lualine_c = {{"%f", color = { gui = 'bold' }}}, },
   inactive_winbar = {},
   extensions = {}
 }
