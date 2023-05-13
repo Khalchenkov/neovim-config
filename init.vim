@@ -29,12 +29,29 @@ nmap <leader><right> :bnext<cr>
 nmap <leader><left> :bprevious<cr>
 nmap <leader>br :BufferRestore<cr>
 nmap <leader>qa :BufferCloseAllButCurrentOrPinned<cr>
-nmap <leader>b :Buffers<cr>
+nmap <leader>b :Telescope buffers<cr>
 nmap <leader>d :BufferMoveNext<cr>
 nmap <leader>a :BufferMovePrevious<cr>
 nmap <leader>p :BufferPick<cr>
 nmap <leader>bd :BufferPickDelete<cr>
 nmap <leader>bp :BufferPin<cr>
+
+set pumheight=25
+
+" window navigation
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-left> <C-w>h
+nmap <C-right> <C-w>l
+
+" navigation in insert
+imap <A-h> <left>
+imap <A-j> <down>
+imap <A-k> <up>
+imap <A-l> <right>
+
+" delete with Alt + d
+imap <A-d> <del>
 
 imap qw <esc>
 vmap qw <esc>
