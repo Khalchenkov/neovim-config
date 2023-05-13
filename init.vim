@@ -13,7 +13,7 @@ set incsearch
 set nowb
 set nobackup
 set ruler
-map <F3> :NvimTreeToggle<CR>
+map <F2> :NvimTreeToggle<CR>
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set colorcolumn=79
