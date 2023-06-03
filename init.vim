@@ -681,7 +681,7 @@ local options = {
           renamed = "➜",
           untracked = "★",
           deleted = "",
-          ignored = "☉",
+          ignored = "",
         },
       },
     },
