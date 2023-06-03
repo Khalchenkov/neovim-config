@@ -27,3 +27,7 @@ npm cache clean -f
 sudo npm install -g n
 sudo n stable
 ```
+
+<h1>Vim-plug</h1>
+
+[Vim-plug github](https://github.com/junegunn/vim-plug)
