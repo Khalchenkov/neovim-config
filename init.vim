@@ -41,8 +41,8 @@ set pumheight=25
 " window navigation
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
-nmap <C-left> <C-w>h
-nmap <C-right> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
 
 " navigation in insert
 imap <A-h> <left>
