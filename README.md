@@ -2,7 +2,7 @@
 
 <h1>Nerd Fonts</h1>
 
-[this site](https://www.nerdfonts.com/)
+[Nerd fonts site](https://www.nerdfonts.com/)
 
 <p>Move archive to ~/.local/share/fonts/, unzip archive, remove zip file and run</p>
 
@@ -12,3 +12,4 @@ sudo fc-cache -fv
 ```
 
 <h1>Nodejs</h1>
+[Nodejs site](https://nodejs.org/en)
