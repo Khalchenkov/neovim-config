@@ -12,4 +12,13 @@ sudo fc-cache -fv
 ```
 
 <h1>Nodejs</h1>
+
 [Nodejs site](https://nodejs.org/en)
+
+<p>Or use npm</p>
+
+```bash
+npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
