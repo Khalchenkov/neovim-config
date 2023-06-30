@@ -648,7 +648,7 @@ local options = {
     },
   },
   renderer = {
-    root_folder_modifier = " :t",
+    root_folder_modifier = ":t",
     highlight_git = true,
     highlight_opened_files = "none",
 
