@@ -31,3 +31,13 @@ sudo n stable
 <h1>Vim-plug</h1>
 
 [Vim-plug github](https://github.com/junegunn/vim-plug)
+
+<h1>Coc-settings</h1>
+
+<p>Run :CocConfig</p>
+
+```bash
+{
+  "inlayHint.enable": false
+}
+```
