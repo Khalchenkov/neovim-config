@@ -7,6 +7,8 @@ Neovim last version
 
 ## Nerd Fonts
 
+Recomended font version < 3version
+
 [Nerd fonts site](https://www.nerdfonts.com/)
 
 Move archive to `~/.local/share/fonts/`, unzip archive, remove zip file and run
