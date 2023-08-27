@@ -144,6 +144,10 @@ nnoremap <A-down> :m .+1<CR>==
 nnoremap <A-up> :m .-2<CR>==
 vnoremap <A-down> :m '>+1<CR>gv=gv
 vnoremap <A-up> :m '<-2<CR>gv=gv
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " coc plug
 let g:coc_global_extensions=[
