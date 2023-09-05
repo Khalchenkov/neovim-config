@@ -828,4 +828,4 @@ colorscheme purpura
 set termguicolors
 hi DiagnosticError guifg=#d000ff
 hi DiagnosticUnderlineError cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl guibg=None guifg=#ff21a2 guisp=#fc0394
-hi CocWarningHighlight cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
+hi DiagnosticUnderlineWarn cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
