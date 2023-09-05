@@ -673,6 +673,7 @@ local options = {
         symlink = "",
         folder = {
           default = "󰉋",
+          open = "",
           symlink = "",
           symlink_open = "",
           arrow_open = "",
