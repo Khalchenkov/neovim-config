@@ -827,5 +827,5 @@ colorscheme purpura
 " Colors for messages in code
 set termguicolors
 hi DiagnosticError guifg=#d000ff
-hi CocErrorHighlight cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl guibg=None guifg=#ff21a2 guisp=#fc0394
+hi DiagnosticUnderlineError cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl guibg=None guifg=#ff21a2 guisp=#fc0394
 hi CocWarningHighlight cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
