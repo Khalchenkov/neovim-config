@@ -106,8 +106,6 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " color schemas
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'ayu-theme/ayu-vim'
 Plug 'yassinebridi/vim-purpura'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tribela/vim-transparent'
