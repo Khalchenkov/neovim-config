@@ -829,3 +829,13 @@ set termguicolors
 hi DiagnosticError guifg=#d000ff
 hi DiagnosticUnderlineError cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl guibg=None guifg=#ff21a2 guisp=#fc0394
 hi DiagnosticUnderlineWarn cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
+
+" Line Numbers
+hi LineNr guifg=#aa7dff
+
+" Popup Menu
+hi Pmenu guibg=None guifg=#ffffff
+hi CocMenuSel guifg=#000000 guibg=#aa7dff
+hi PmenuSel guifg=#000000 guibg=#aa7dff
+hi PmenuSbar guibg=#503a78
+hi PmenuThumb guibg=#ffffff
