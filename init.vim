@@ -816,10 +816,6 @@ require('lualine').setup {
 }
 EOF
 
-" Floaterm settings
-let g:floaterm_width=0.93
-let g:floaterm_height=0.92
-
 " Colorscheme
 colorscheme purpura
 
