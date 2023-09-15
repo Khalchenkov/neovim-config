@@ -62,8 +62,6 @@ nmap <leader>/ :Telescope current_buffer_fuzzy_find<cr>
 nmap <leader>fo :Telescope oldfiles<cr>
 nmap <leader>f :Files<cr>
 nmap <leader>l :Lines<cr>
-nmap <leader>ft :FloatermToggle<cr>
-nmap <leader>t :terminal<cr>
 
 " Rust hotkey
 nmap <leader>rf :RustFmt<cr>
