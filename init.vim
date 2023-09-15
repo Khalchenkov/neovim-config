@@ -136,9 +136,6 @@ Plug 'prettier/vim-prettier', {
 
 Plug 'bmatcuk/stylelint-lsp'
 
-" Convenient floating terminal window
-Plug 'voldikss/vim-floaterm'
-
 Plug 'ray-x/lsp_signature.nvim'
 
 call plug#end()
