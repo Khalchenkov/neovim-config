@@ -111,6 +111,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tribela/vim-transparent'
 Plug 'gen740/SmoothCursor.nvim'
 
+" Startup Screen
+Plug 'nvimdev/dashboard-nvim'
+Plug 'goolord/alpha-nvim'
+
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
