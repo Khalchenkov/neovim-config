@@ -201,11 +201,9 @@ let g:coc_global_extensions=[
 "    \'coc-snippets',
 
 " Rust
-let g:LanguageClient_serverCommands = {
-\ 'rust': ['rust-analyzer'],
-\ }
-
-let g:ale_linters = {'rust': ['analyzer']}
+lua << EOF
+require("rust-tools").setup()
+EOF
 
 " Automatically format frontend files with prettier after file save
 let g:prettier#autoformat = 1
