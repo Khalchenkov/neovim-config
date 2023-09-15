@@ -58,6 +58,8 @@ vmap qw <esc>
 imap <C-s> <esc>
 nmap <leader>ff :Telescope find_files<cr>
 nmap <leader>fg :Telescope live_grep<cr>
+nmap <leader>/ :Telescope current_buffer_fuzzy_find<cr>
+nmap <leader>fo :Telescope oldfiles<cr>
 nmap <leader>f :Files<cr>
 nmap <leader>l :Lines<cr>
 nmap <leader>ft :FloatermToggle<cr>
