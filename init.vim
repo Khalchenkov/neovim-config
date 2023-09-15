@@ -93,7 +93,11 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
+
+" Rust
 Plug 'rust-lang/rust.vim'
+Plug 'simrat39/rust-tools.nvim'
+
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-tree/nvim-web-devicons' " optional
