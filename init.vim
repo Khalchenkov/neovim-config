@@ -76,11 +76,6 @@ set expandtab
 set fileformat=unix
 filetype indent on      " load filetype-specific indent files
 
-" set guicursor&
-let &t_SI .="\e[0 q" "SI = режим вставки
-let &t_SR .="\e[2 q" "SR = режим замены
-let &t_EI .="\e[2 q" "EI = нормальный режим
-
 " for tabulation
 set smartindent
 set shiftwidth=2
