@@ -40,6 +40,7 @@ Run `:CocConfig`
 
 ```json
 {
-  "inlayHint.enable": false
+  "inlayHint.enable": false,
+  "suggest.enableFloat": false,
 }
 ```
