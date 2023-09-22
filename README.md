@@ -44,3 +44,41 @@ Run `:CocConfig`
   "suggest.enableFloat": false,
 }
 ```
+
+Or if you want use kind
+
+```json
+{
+  "inlayHint.enable": false,
+  "suggest.enableFloat": false,
+  "suggest.formatItems": ["kind", "abbr", "menu", "shortcut"],
+  "suggest.completionItemKindLabels": {
+    "method": " 󰆧 ",
+    "function": " 󰆧 ",
+    "variable": "[]",
+    "field": " 󰜢 ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": " 󰠱 ",
+    "interface": "  ",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練 ",
+    "reference": " 󰈇 ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": "  ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": "  ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": " 󰚩 ",
+    "enumMember": "  ",
+    "default": "  "
+  }
+}
+```
