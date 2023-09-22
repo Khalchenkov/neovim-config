@@ -461,14 +461,6 @@ command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-ar
 
 let g:transparent_enabled = v:true
 
-" Autosave plugin
-lua << EOF
-require("auto-save").setup(
-    {
-    }
-)
-EOF
-
 " Telescope fzf plugin
 lua << EOF
 local present, telescope = pcall(require, "telescope")
