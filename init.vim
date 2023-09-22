@@ -761,7 +761,8 @@ require('lualine').setup {
       statusline = 1000,
       tabline = 1000,
       winbar = 1000,
-    }
+    },
+    disabled_filetypes = { "alpha", "NvimTree" },
   },
   sections = {
     lualine_a = {'mode'},
