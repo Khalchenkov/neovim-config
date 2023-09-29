@@ -42,6 +42,7 @@ Run `:CocConfig`
 {
   "inlayHint.enable": false,
   "suggest.enableFloat": false,
+  "signature.enable": false,
 }
 ```
 
@@ -51,6 +52,7 @@ Or if you want use kind
 {
   "inlayHint.enable": false,
   "suggest.enableFloat": false,
+  "signature.enable": false,
   "suggest.formatItems": ["kind", "abbr", "menu", "shortcut"],
   "suggest.completionItemKindLabels": {
     "method": " 󰆧 ",
