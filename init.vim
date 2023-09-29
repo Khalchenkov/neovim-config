@@ -119,19 +119,8 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'Pocco81/auto-save.nvim'
 Plug 'justinmk/vim-sneak'
 Plug 'jiangmiao/auto-pairs'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-emoji'
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-Plug 'hrsh7th/cmp-nvim-lua'
-
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-lua/plenary.nvim'
-
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-
-Plug 'bmatcuk/stylelint-lsp'
 
 Plug 'ray-x/lsp_signature.nvim'
 
