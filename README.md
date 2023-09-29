@@ -82,3 +82,16 @@ Or if you want use kind
   }
 }
 ```
+
+## My other setup
+Terminal setup
+- [Terminal setup](https://github.com/Khalchenkov/terminal-setup)
+
+Vim setup
+- [Vim setup](https://github.com/Khalchenkov/vim-config)
+
+Neofetch setup
+- [Neofetch setup](https://github.com/Khalchenkov/neofetch-config)
+
+Tmux setup
+- [Tmux setup](https://github.com/Khalchenkov/tmux-config)
