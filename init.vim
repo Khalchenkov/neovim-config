@@ -63,16 +63,16 @@ nmap <leader>fo :Telescope oldfiles<cr>
 nmap <leader>f :Files<cr>
 nmap <leader>l :Lines<cr>
 
-" Rust format
+" Rust formatter
 nmap <leader>rf :RustFmt<cr>
 
-" Golang format
+" Golang formatter
 nmap <leader>gf :!gofmt -w % && golines -w % && goimports -w %<cr>
 
-" Python format
+" Python formatter
 nmap <leader>pf :!black %<cr>
 
-" Web format
+" Web formatter
 nmap <leader>wf :!prettier % -w<cr>
 
 set autoindent
