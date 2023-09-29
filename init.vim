@@ -66,7 +66,7 @@ nmap <leader>l :Lines<cr>
 " Rust formatter
 nmap <leader>rf :RustFmt<cr>
 
-" Golang formatter
+" Golang formatters
 nmap <leader>gf :!gofmt -w % && golines -w % && goimports -w %<cr>
 
 " Python formatter
