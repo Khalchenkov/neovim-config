@@ -332,7 +332,7 @@ local on_attach = function(client, bufnr)
 
   require "lsp_signature".on_attach({
       bind = true, -- This is mandatory, otherwise border config won't get registered.
-      floating_window = true,
+      floating_window = false,
       floating_window_above_cur_line = true,
       floating_window_off_x = 20,
       doc_lines = 10,
