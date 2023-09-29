@@ -155,7 +155,6 @@ let g:coc_global_extensions=[
     \'coc-xml',
     \'coc-yaml',
     \'coc-toml',
-    \'coc-markdownlint',
     \'coc-clangd',
     \'coc-pyright',
     \'coc-go',
@@ -173,12 +172,11 @@ let g:coc_global_extensions=[
 "    \
 "    \'coc-css',
 "    \'coc-html',
-"   XML, YAML, TOML, Markdown
+"   XML, YAML, TOML
 "    \
 "    \'coc-xml',
 "    \'coc-yaml',
 "    \'coc-toml',
-"    \'coc-markdownlint',
 "   C/C++
 "    \
 "    \'coc-clangd',
