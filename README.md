@@ -1,4 +1,4 @@
-# neovim-config
+<h1 align="center">Neovim setup</h1>
 
 ## Neovim
 Neovim last version
