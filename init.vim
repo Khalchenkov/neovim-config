@@ -195,13 +195,6 @@ lua << EOF
 require("rust-tools").setup()
 EOF
 
-" Automatically format frontend files with prettier after file save
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-
-" Disable quickfix window for prettier
-let g:prettier#quickfix_enabled = 0
-
 " Coc-config
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 inoremap <silent><expr> <cr> "\<c-g>u\<CR>"
