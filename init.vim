@@ -9,7 +9,6 @@ set completeopt
 set hidden
 set nowrap
 set incsearch
-set nowb
 set nobackup
 set ruler
 map <F2> :NvimTreeToggle<CR>
