@@ -18,7 +18,6 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set colorcolumn=79
 set guicursor+=a:blinkon1
-nnoremap ,<space> :nohlsearch<CR>
 set linebreak
 let mapleader = " "
 nmap qq :q<cr>
@@ -56,6 +55,9 @@ imap <A-d> <del>
 imap qw <esc>
 vmap qw <esc>
 imap <C-s> <esc>
+
+" No hlsearch
+nnoremap <leader>, :nohlsearch<cr>
 
 " Find
 nmap <leader>ff :Telescope find_files<cr>
