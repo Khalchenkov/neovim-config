@@ -1,5 +1,4 @@
 set mouse=a  " enable mouse
-set encoding=utf-8
 set number
 set relativenumber
 set noswapfile
@@ -20,9 +19,23 @@ set colorcolumn=80
 set pumheight=25
 set guicursor+=a:blinkon1
 set linebreak
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+filetype indent on
+set smartindent
+set shiftwidth=2
+
+" Leader
 let mapleader = " "
+
+" Quit and save
 nmap qq :q<cr>
 nmap <leader>w :w!<cr>
+
+" Buffer
 nmap <leader>qq :bd<cr>
 nmap <leader>qa :bufdo<cr>
 nmap <leader><right> :bnext<cr>
@@ -77,20 +90,6 @@ nmap <leader>pf :!black %<cr>
 
 " Web formatter
 nmap <leader>wf :!prettier % -w<cr>
-
-set autoindent
-
-set iminsert=0
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set fileformat=unix
-filetype indent on      " load filetype-specific indent files
-
-" for tabulation
-set smartindent
-set shiftwidth=2
 
 call plug#begin('~/.vim/plugged')
 
