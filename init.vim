@@ -91,6 +91,7 @@ nmap <leader>pf :!black %<cr>
 " Web formatter
 nmap <leader>wf :!prettier % -w<cr>
 
+" Plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'numToStr/Comment.nvim'
