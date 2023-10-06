@@ -360,8 +360,6 @@ for _, lsp in ipairs(servers) do
 end
 EOF
 
-let g:transparent_enabled = v:true
-
 " Telescope fzf plugin
 lua << EOF
 local present, telescope = pcall(require, "telescope")
@@ -767,6 +765,9 @@ EOF
 
 " Colorscheme
 colorscheme purpura
+
+" Transparent
+let g:transparent_enabled = v:true
 
 " Colors for messages in code
 set termguicolors
