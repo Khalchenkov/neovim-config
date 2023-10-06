@@ -130,11 +130,9 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 Plug 'Pocco81/auto-save.nvim'
-Plug 'justinmk/vim-sneak'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-lua/plenary.nvim'
-
 Plug 'ray-x/lsp_signature.nvim'
 
 call plug#end()
@@ -234,9 +232,6 @@ inoremap <silent><nowait><expr> <C-down> coc#float#has_scroll() ? "\<c-r>=coc#fl
 inoremap <silent><nowait><expr> <C-up> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 vnoremap <silent><nowait><expr> <C-down> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-up> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-
-" Turn on vim-sneak
-let g:sneak#label = 1
 
 lua << EOF
 -- Set completeopt to have a better completion experience
