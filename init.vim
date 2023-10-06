@@ -11,7 +11,6 @@ set nowrap
 set incsearch
 set nobackup
 set ruler
-map <F2> :NvimTreeToggle<CR>
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set colorcolumn=80
@@ -32,6 +31,9 @@ let mapleader = " "
 " Quit and save
 nmap qq :q<cr>
 nmap <leader>w :w!<cr>
+
+" NvimTree
+map <F2> :NvimTreeToggle<cr>
 
 " Buffer
 nmap <leader>qq :bd<cr>
