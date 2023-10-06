@@ -3,7 +3,7 @@ set encoding=utf-8
 set number
 set relativenumber
 set noswapfile
-set scrolloff=7
+set scrolloff=8
 syntax enable
 set completeopt
 " set cursorline
@@ -16,7 +16,8 @@ set ruler
 map <F2> :NvimTreeToggle<CR>
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set colorcolumn=79
+set colorcolumn=80
+set pumheight=25
 set guicursor+=a:blinkon1
 set linebreak
 let mapleader = " "
@@ -33,8 +34,6 @@ nmap <leader>a :BufferMovePrevious<cr>
 nmap <leader>p :BufferPick<cr>
 nmap <leader>bd :BufferPickDelete<cr>
 nmap <leader>bp :BufferPin<cr>
-
-set pumheight=25
 
 " window navigation
 nmap <C-j> <C-w>j
