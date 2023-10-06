@@ -57,7 +57,7 @@ vmap qw <esc>
 imap <C-s> <esc>
 
 " No hlsearch
-nnoremap <leader>, :nohlsearch<cr>
+nmap <leader>, :nohlsearch<cr>
 
 " Find
 nmap <leader>ff :Telescope find_files<cr>
