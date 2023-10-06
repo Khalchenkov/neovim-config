@@ -52,6 +52,7 @@ imap <A-l> <right>
 " delete with Alt + d
 imap <A-d> <del>
 
+" Escape
 imap qw <esc>
 vmap qw <esc>
 imap <C-s> <esc>
