@@ -29,7 +29,6 @@ nmap <leader><right> :bnext<cr>
 nmap <leader><left> :bprevious<cr>
 nmap <leader>br :BufferRestore<cr>
 nmap <leader>qa :BufferCloseAllButCurrentOrPinned<cr>
-nmap <leader>b :Telescope buffers<cr>
 nmap <leader>d :BufferMoveNext<cr>
 nmap <leader>a :BufferMovePrevious<cr>
 nmap <leader>p :BufferPick<cr>
@@ -56,12 +55,14 @@ imap <A-d> <del>
 imap qw <esc>
 vmap qw <esc>
 imap <C-s> <esc>
+
+" Find
 nmap <leader>ff :Telescope find_files<cr>
 nmap <leader>fg :Telescope live_grep<cr>
 nmap <leader>/ :Telescope current_buffer_fuzzy_find<cr>
 nmap <leader>fo :Telescope oldfiles<cr>
-nmap <leader>f :Files<cr>
-nmap <leader>l :Lines<cr>
+nmap <leader>fl :Lines<cr>
+nmap <leader>fb :Telescope buffers<cr>
 
 " Rust formatter
 nmap <leader>rf :RustFmt<cr>
