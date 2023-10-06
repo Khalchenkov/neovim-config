@@ -698,7 +698,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-" Tabline config
+" Bufferline config
 lua << EOF
 vim.g.barbar_auto_setup = false -- disable auto-setup
 require'barbar'.setup {
@@ -852,3 +852,6 @@ hi CocMenuSel guifg=#000000 guibg=#aa7dff
 hi PmenuSel guifg=#000000 guibg=#aa7dff
 hi PmenuSbar guibg=#503a78
 hi PmenuThumb guibg=#ffffff
+
+" End of buffer
+hi EndOfBuffer guifg=#7656b3
