@@ -1,29 +1,27 @@
-set mouse=a  " enable mouse
+" Base options
+set mouse=a
 set number
 set relativenumber
-set noswapfile
 set scrolloff=8
-syntax enable
-set completeopt
-" set cursorline
-set hidden
-set nowrap
-set incsearch
-set nobackup
-set ruler
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
 set colorcolumn=80
 set pumheight=25
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 set guicursor+=a:blinkon1
-set linebreak
-set autoindent
-set tabstop=4
-set softtabstop=4
 set expandtab
-filetype indent on
-set smartindent
 set shiftwidth=2
+set smartindent
+set tabstop=2
+set softtabstop=2
+filetype indent on
+set ignorecase
+set smartcase
+set nowrap
+set splitbelow
+set splitright
+set updatetime=250
+set timeoutlen=500
+syntax on
 
 " Leader
 let mapleader = " "
