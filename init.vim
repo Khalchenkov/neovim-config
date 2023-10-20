@@ -412,11 +412,21 @@ local options = {
       n = { ["q"] = require("telescope.actions").close },
     },
   },
-
-  extensions_list = { "themes", "terms" },
+  extensions_list = { "fzf" },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    },
+  },
 }
 
 telescope.setup(options)
+for _, ext in ipairs(options.extensions_list) do
+  telescope.load_extension(ext)
+end
 EOF
 
 " SmoothCursor
