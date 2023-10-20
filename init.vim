@@ -781,7 +781,7 @@ hi DiagnosticUnderlineWarn cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
 hi LineNr guifg=#aa7dff
 
 " Telescope
-hi TelescopePromptCounter guifg=#EDE093
+hi TelescopePromptCounter guifg=#ede093
 
 " Popup Menu
 hi Pmenu guibg=None guifg=#ffffff
