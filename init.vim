@@ -35,7 +35,6 @@ map <F2> :NvimTreeToggle<cr>
 
 " Buffer
 nmap <leader>qq :bd<cr>
-nmap <leader>qa :bufdo<cr>
 nmap <leader><right> :bnext<cr>
 nmap <leader><left> :bprevious<cr>
 nmap <leader>br :BufferRestore<cr>
