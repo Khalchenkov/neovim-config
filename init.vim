@@ -103,9 +103,12 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
 
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'romgrk/barbar.nvim'
-Plug 'nvim-tree/nvim-web-devicons' " optional
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
