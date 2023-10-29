@@ -784,6 +784,7 @@ hi LineNr guifg=#aa7dff
 
 " Telescope
 hi TelescopePromptCounter guifg=#ede093
+hi TelescopeMatching guifg=#ff00d4 gui=bold
 
 " Popup Menu
 hi Pmenu guibg=None guifg=#ffffff
