@@ -95,3 +95,6 @@ Neofetch setup
 
 Tmux setup
 - [Tmux setup](https://github.com/Khalchenkov/tmux-config)
+
+VS Code setup
+- [VS Code setup](https://github.com/Khalchenkov/vscode-setup/tree/main)
