@@ -13,6 +13,7 @@ set shiftwidth=2
 set smartindent
 set tabstop=2
 set softtabstop=2
+filetype plugin on
 filetype indent on
 set ignorecase
 set smartcase
