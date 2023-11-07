@@ -5,8 +5,7 @@ set relativenumber
 set scrolloff=8
 set colorcolumn=80
 set pumheight=25
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+set foldmethod=indent
 set guicursor+=a:blinkon1
 set expandtab
 set shiftwidth=2
