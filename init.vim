@@ -37,6 +37,8 @@ map <F2> :NvimTreeToggle<cr>
 nmap <leader>qq :bd<cr>
 nmap <leader><right> :bnext<cr>
 nmap <leader><left> :bprevious<cr>
+nmap <leader>k :bnext<cr>
+nmap <leader>j :bprevious<cr>
 nmap <leader>br :BufferRestore<cr>
 nmap <leader>qa :BufferCloseAllButCurrentOrPinned<cr>
 nmap <leader>d :BufferMoveNext<cr>
