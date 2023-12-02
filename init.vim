@@ -41,8 +41,8 @@ nmap <leader>k :bnext<cr>
 nmap <leader>j :bprevious<cr>
 nmap <leader>br :BufferRestore<cr>
 nmap <leader>qa :BufferCloseAllButCurrentOrPinned<cr>
-nmap <leader>d :BufferMoveNext<cr>
-nmap <leader>a :BufferMovePrevious<cr>
+nmap <leader>l :BufferMoveNext<cr>
+nmap <leader>h :BufferMovePrevious<cr>
 nmap <leader>p :BufferPick<cr>
 nmap <leader>bd :BufferPickDelete<cr>
 nmap <leader>bp :BufferPin<cr>
