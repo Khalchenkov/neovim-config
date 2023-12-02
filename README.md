@@ -22,12 +22,10 @@ sudo fc-cache -fv
 
 [Nodejs site](https://nodejs.org/en)
 
-Or use npm
+Installing node.js using [nvm](https://github.com/nvm-sh/nvm)
 
 ```bash
-npm cache clean -f
-sudo npm install -g n
-sudo n stable
+nvm install node
 ```
 
 ## Vim-plug
