@@ -754,8 +754,10 @@ let g:transparent_enabled = v:true
 " Colors for messages in code
 set termguicolors
 hi DiagnosticError guifg=#d000ff gui=bold
-hi DiagnosticUnderlineError cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl guibg=None guifg=#ff21a2 guisp=#fc0394
-hi DiagnosticUnderlineWarn cterm=undercurl ctermfg=203 ctermbg=54 gui=undercurl
+hi DiagnosticUnderlineError cterm=undercurl gui=undercurl guifg=#ff21a2 guisp=#fc0394
+hi DiagnosticUnderlineWarn cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineInfo cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineHint cterm=undercurl gui=undercurl
 
 " Line Numbers
 hi LineNr guifg=#aa7dff
