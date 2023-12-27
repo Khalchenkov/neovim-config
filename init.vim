@@ -679,7 +679,7 @@ require('lualine').setup {
     lualine_z = {}
   },
   tabline = {},
-  winbar = { lualine_c = {{"%f", color = { gui = 'bold' }}}, },
+  winbar = { lualine_c = {{"filename", path = 2, color = { gui = 'bold' }}}, },
   inactive_winbar = {},
   extensions = {}
 }
