@@ -806,33 +806,194 @@ dashboard.opts.opts.noautocmd = true
 alpha.setup(dashboard.opts)
 EOF
 
-" Colorscheme
-colorscheme purpura
-
 " Transparent
 let g:transparent_enabled = v:true
+" Switch colorschemes
+lua << EOF
+require("auto-dark-mode").setup({
+  update_interval = 1000,
 
-" Colors for messages in code
-set termguicolors
-hi DiagnosticError guifg=#d000ff gui=bold
-hi DiagnosticUnderlineError cterm=undercurl gui=undercurl guifg=#ff21a2 guisp=#fc0394
-hi DiagnosticUnderlineWarn cterm=undercurl gui=undercurl
-hi DiagnosticUnderlineInfo cterm=undercurl gui=undercurl
-hi DiagnosticUnderlineHint cterm=undercurl gui=undercurl
+  -- Light colorscheme
+  set_light_mode = function()
+    vim.cmd("colorscheme purpura")
 
-" Line Numbers
-hi LineNr guifg=#aa7dff
+    -- Colors for messages in code
+    vim.api.nvim_set_hl(0, "DiagnosticError", {
+      fg = "#e100ff",
+      bold = true
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {
+      cterm = { undercurl = true },
+      undercurl = true,
+      fg = "#ff21a2",
+      sp = "#fc0394"
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", {
+      cterm = { undercurl = true },
+      undercurl = true
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", {
+      cterm = { undercurl = true },
+      undercurl = true
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", {
+      cterm = { undercurl = true },
+      undercurl = true
+    })
 
-" Telescope
-hi TelescopePromptCounter guifg=#ede093
-hi TelescopeMatching guifg=#ff00d4 gui=bold
+    -- Line Numbers
+    vim.api.nvim_set_hl(0, "LineNr", {
+      fg = "#aa7dff" 
+    })
 
-" Popup Menu
-hi Pmenu guibg=None guifg=#ffffff
-hi CocMenuSel guifg=#000000 guibg=#aa7dff
-hi PmenuSel guifg=#000000 guibg=#aa7dff
-hi PmenuSbar guibg=#503a78
-hi PmenuThumb guibg=#ffffff
+    -- Lualine change
+    require('lualine').setup({
+      sections = {
+        lualine_b = {'branch',
+          {'diff', symbols = { added = ' ', modified = ' 柳', removed = '  ' },
+            diff_color = {
+              added = { fg = '#00ff90' },
+              modified = { fg = '#ffffff' },
+              removed = { fg = '#ff7de5' }
+            },
+          },
+          {'diagnostics', sources = { 'nvim_diagnostic' },
+            symbols = { error = '(╯°□°)╯  ', warn = ' ', info = ' ' }
+          }
+        }
+      }
+    })
 
-" End of buffer
-hi EndOfBuffer guifg=#7656b3
+    -- Cursor
+    require('smoothcursor').setup({
+      local autocmd = vim.api.nvim_create_autocmd
+
+      autocmd({ 'ModeChanged' }, {
+        callback = function()
+          local current_mode = vim.fn.mode()
+          if current_mode == 'n' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#8aa872' })
+            vim.fn.sign_define('smoothcursor', { text = "👻" })
+          elseif current_mode == 'v' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#ffffff' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 'V' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#ffffff' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 's' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#ffffff' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 'i' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#fff6a1' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 'R' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#b5cea8' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          end
+        end,
+      })
+    })
+  end,
+
+  -- Dark colorscheme
+  set_dark_mode = function()
+    vim.cmd("colorscheme danger_candy")
+
+    -- Colors for messages in code
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", {
+      cterm = { undercurl = true },
+      undercurl = true,
+      sp = "#61afef"
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", {
+      cterm = { undercurl = true },
+      undercurl = true,
+      sp = "#c8a2f7"
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", {
+      cterm = { undercurl = true },
+      undercurl = true,
+      sp = "#f1fa8c"
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticError", {
+      fg = "#cbe6ff",
+      bold = true
+    })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {
+      cterm = { undercurl = true },
+      undercurl = true,
+      fg = "#ff21a2",
+      sp = "#fc0394"
+    })
+
+    -- Line Numbers
+    vim.api.nvim_set_hl(0, "LineNr", {
+      fg = "#cbe6ff"
+    })
+
+    -- NvimTree
+    vim.api.nvim_set_hl(0, "NvimTreeRootFolder", {
+      fg = "#cbe6ff"
+    })
+
+    -- Telescope
+    vim.api.nvim_set_hl(0, "TelescopePromptCounter", {
+      fg = "#875fff"
+    })
+
+    -- Buffers
+    vim.api.nvim_set_hl(0, "BufferDefaultInactive", {
+      bg = "#262b4c"
+    })
+    vim.api.nvim_set_hl(0, "BufferDefaultCurrent", {
+      fg = "#ffffd7"
+    })
+    vim.api.nvim_set_hl(0, "BufferDefaultVisible", {
+      fg = "#875fff"
+    })
+
+    -- Lualine change
+    require('lualine').setup({
+      sections = {
+        lualine_b = {'branch',
+          {'diff', symbols = { added = ' ', modified = ' 柳', removed = '  ' }},
+          {'diagnostics', sources = { 'nvim_diagnostic' },
+            symbols = { error = '(╯°□°)╯  ', warn = ' ', info = ' ' }
+          }
+        }
+      }
+    })
+
+    -- Cursor
+    require('smoothcursor').setup({
+      local autocmd = vim.api.nvim_create_autocmd
+
+      autocmd({ 'ModeChanged' }, {
+        callback = function()
+          local current_mode = vim.fn.mode()
+          if current_mode == 'n' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#8aa872' })
+            vim.fn.sign_define('smoothcursor', { text = "👻" })
+          elseif current_mode == 'v' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#8080ac' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 'V' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#8080ac' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 's' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#8080ac' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 'i' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#cbe6ff' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          elseif current_mode == 'R' then
+            vim.api.nvim_set_hl(0, 'SmoothCursor', { fg = '#ffd75f' })
+            vim.fn.sign_define('smoothcursor', { text = "" })
+          end
+        end,
+      })
+    })
+  end
+})
+EOF
+
