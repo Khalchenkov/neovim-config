@@ -255,11 +255,6 @@ let g:coc_global_extensions=[
     \'coc-snippets',
     \]
 
-" Rust
-lua << EOF
-require("rust-tools").setup()
-EOF
-
 " Coc-config
 inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
 inoremap <silent><expr> <cr> "\<c-g>u\<CR>"
@@ -647,11 +642,6 @@ local options = {
 }
 
 require("nvim-tree").setup(options)
-EOF
-
-" Comment
-lua << EOF
-require('Comment').setup()
 EOF
 
 " Treesitter config
