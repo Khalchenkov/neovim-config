@@ -695,7 +695,7 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
-    section_separators = { left = ' 🐨', right = '🐸 ' },
+    section_separators = { left = ' 🐨', right = ' ' },
     component_separators = { left = '', right = '' },
     ignore_focus = {},
     always_divide_middle = true,
@@ -729,7 +729,7 @@ require('lualine').setup {
     lualine_c = {{'filename', color = { gui = 'bold' }}, 'filesize'},
     lualine_x = {'filetype', 'encoding', 'fileformat'},
     lualine_y = {'%l,%c/%L'},
-    lualine_z = {'progress'}
+    lualine_z = {{'progress', separator = { left = '🐸 ' }}}
   },
   inactive_sections = {
     lualine_a = {},
