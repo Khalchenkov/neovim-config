@@ -808,6 +808,7 @@ EOF
 
 " Transparent
 let g:transparent_enabled = v:true
+
 " Switch colorschemes
 lua << EOF
 require("auto-dark-mode").setup({
