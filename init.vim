@@ -21,6 +21,7 @@ set splitbelow
 set splitright
 set updatetime=250
 set timeoutlen=500
+set termguicolors
 syntax on
 
 " Leader
