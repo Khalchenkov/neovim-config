@@ -157,35 +157,6 @@ let g:coc_global_extensions=[
     \'coc-snippets',
     \]
 
-"   JS, TS, Json
-"    \
-"    \'coc-json',
-"    \'coc-tsserver',
-"   Rust
-"    \
-"    \'coc-rust-analyzer',
-"   HTML, CSS
-"    \
-"    \'coc-css',
-"    \'coc-html',
-"   XML, YAML, TOML
-"    \
-"    \'coc-xml',
-"    \'coc-yaml',
-"    \'coc-toml',
-"   C/C++
-"    \
-"    \'coc-clangd',
-"   Python
-"    \
-"    \'coc-pyright',
-"   Golang
-"    \
-"    \'coc-go',
-"   Snippets
-"    \
-"    \'coc-snippets',
-
 " Rust
 lua << EOF
 require("rust-tools").setup()
