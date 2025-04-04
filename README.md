@@ -15,7 +15,6 @@ Move archive to `~/.local/share/fonts/`, unzip archive, remove zip file and run
 
 ```bash
 fc-cache -fv
-sudo fc-cache -fv
 ```
 
 ## Nodejs
