@@ -414,6 +414,7 @@ end
 EOF
 
 " Telescope fzf plugin
+autocmd! FileType TelescopeResults setlocal nofoldenable
 lua << EOF
 local present, telescope = pcall(require, "telescope")
 
