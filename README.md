@@ -28,10 +28,6 @@ Installing node.js using [nvm](https://github.com/nvm-sh/nvm)
 nvm install node
 ```
 
-## Vim-plug
-
-[Vim-plug github](https://github.com/junegunn/vim-plug)
-
 ## Coc-settings
 
 Run `:CocConfig`
