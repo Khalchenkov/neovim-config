@@ -84,52 +84,150 @@ nmap <leader>pf :!black %<cr>
 nmap <leader>wf :!prettier % -w<cr>
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+lua << EOF
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
 
-Plug 'numToStr/Comment.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip'
-
-" Rust
-Plug 'rust-lang/rust.vim'
-Plug 'simrat39/rust-tools.nvim'
-
-" Tmux
-Plug 'christoomey/vim-tmux-navigator'
-
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'romgrk/barbar.nvim'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'nvim-tree/nvim-tree.lua'
-Plug 'rafamadriz/friendly-snippets'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" color schemas
-Plug 'yassinebridi/vim-purpura'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tribela/vim-transparent'
-Plug 'gen740/SmoothCursor.nvim'
-
-" Startup Screen
-Plug 'nvimdev/dashboard-nvim'
-Plug 'goolord/alpha-nvim'
-
-" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-
-Plug 'Pocco81/auto-save.nvim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'ray-x/lsp_signature.nvim'
-
-call plug#end()
+require("lazy").setup({
+  "nvim-lua/plenary.nvim",
+  {
+    "numToStr/Comment.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("Comment").setup()
+    end
+  },
+  {
+    "neovim/nvim-lspconfig"
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      {
+        "hrsh7th/cmp-nvim-lsp",
+        "saadparwaiz1/cmp_luasnip"
+      },
+      {
+        "L3MON4D3/LuaSnip",
+        dependencies = "rafamadriz/friendly-snippets"
+      }
+    }
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = { "rust" },
+    event = "VeryLazy"
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = { "rust" },
+    config = function()
+      require("rust-tools").setup()
+    end
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    event = "VeryLazy"
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
+  {
+    "romgrk/barbar.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate"
+  },
+  {
+    "yassinebridi/vim-purpura",
+    lazy = false,
+    priority = 1000
+  },
+  {
+    "igorgue/danger",
+    lazy = false,
+    priority = 1000
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    event = "VeryLazy"
+  },
+  {
+    "neoclide/coc.nvim",
+    branch = "release"
+  },
+  {
+    "tribela/vim-transparent",
+    lazy = false,
+    priority = 1000
+  },
+  {
+    "gen740/SmoothCursor.nvim"
+  },
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
+  {
+    "goolord/alpha-nvim"
+  },
+  {
+    {
+      "junegunn/fzf", 
+      build = "./install --bin"
+    },
+    "junegunn/fzf.vim"
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    branch = "0.1.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      "nvim-treesitter/nvim-treesitter"
+    }
+  },
+  {
+    "Pocco81/auto-save.nvim",
+    event = { "InsertEnter", "VeryLazy" }
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = { "InsertEnter", "VeryLazy" }
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim"
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = { "InsertEnter", "VeryLazy" }
+  },
+})
+EOF
 
 " Moving string
 nnoremap <A-down> :m .+1<CR>==
